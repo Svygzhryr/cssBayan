@@ -46,22 +46,26 @@ body {
     cursor: pointer;
 }
 
-.bayan_item:hover .img_wrapper {
+.bayan_item:hover .img_wrapper,
+input:checked ~ .img_wrapper {
     height: 25rem;
     padding-bottom: 2rem;
 }
 
-.bayan_item:hover .item_plus {
+.bayan_item:hover .item_plus,
+input:checked .item_plus {
     transform: rotateZ(45deg);
     color: var(--peach);
 
 }
 
-.bayan_item:hover .item_title {
+.bayan_item:hover .item_title,
+input:checked ~ .item_title {
     color: var(--peach);
 }
 
-.bayan_item:active .img_wrapper {
+.bayan_item:checked .img_wrapper,
+input:checked ~ .img_wrapper {
     height: 25rem;
 }
 
@@ -103,4 +107,16 @@ body {
 .item_plus {
     cursor: pointer;
     transform-origin: center;
+}
+
+#one:target .img_wrapper {
+    height: 25rem;
+}
+
+input {
+    display: none;
+}
+
+label:hover {
+    cursor: pointer;
 }
