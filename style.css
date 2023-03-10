@@ -3,6 +3,8 @@
 :root {
     --bg: #1f1f1f;
     --white: #f0f0f0;
+    --black: #141414;
+    --peach: #e79a66;
 }
 
 body {
@@ -14,7 +16,9 @@ body {
 }
 
 .bayan {
-    padding: 10rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+    max-width: 50rem;
 }
 
 .bayan_title {
@@ -22,25 +26,81 @@ body {
     font-size: 3rem;
     font-family: 'Lora', serif;
     text-align: center;
+
 }
 
 .bayan_list {
-
+    margin-top: 2rem;
 }
 
 
 
 .bayan_item {
+    padding: 0 1rem;
+    background-color: var(--black);
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.bayan_item:hover {
+    cursor: pointer;
+}
+
+.bayan_item:hover .img_wrapper {
+    height: 25rem;
+    padding-bottom: 2rem;
+}
+
+.bayan_item:hover .item_plus {
+    transform: rotateZ(45deg);
+    color: var(--peach);
 
 }
 
-.bayan_item_title {
+.bayan_item:hover .item_title {
+    color: var(--peach);
+}
+
+.bayan_item:active .img_wrapper {
+    height: 25rem;
+}
+
+.title_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_title {
     margin: 1rem 0;
     font-size: 3rem;
     color: var(--white);
+    font-family: 'Lora', serif;
+    max-width: 30%;
+}
+
+.img_wrapper {
+    display: flex;
+    justify-content: center;
+    height: 0;
+
+    transition: all .2s ease-in-out;
 }
 
 .bayan_item_img {
     max-width: 25rem;
     height: auto;
+}
+
+.item_plus {
+    color: var(--white);
+    font-size: 6rem;
+    max-width: 8rem;
+    max-height: auto;
+    transition: all .2s ease-in-out;
+    text-align: center;
+}
+
+.item_plus {
+    cursor: pointer;
+    transform-origin: center;
 }
