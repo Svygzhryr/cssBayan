@@ -46,6 +46,15 @@ body {
     cursor: pointer;
 }
 
+input {
+    display: none;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+
 .bayan_item:hover .img_wrapper,
 input:checked ~ .img_wrapper {
     height: 25rem;
@@ -53,14 +62,14 @@ input:checked ~ .img_wrapper {
 }
 
 .bayan_item:hover .item_plus,
-input:checked .item_plus {
+input:checked + .title_wrapper .item_plus {
     transform: rotateZ(45deg);
     color: var(--peach);
 
 }
 
 .bayan_item:hover .item_title,
-input:checked ~ .item_title {
+input:checked + .title_wrapper .item_title {
     color: var(--peach);
 }
 
@@ -107,16 +116,4 @@ input:checked ~ .img_wrapper {
 .item_plus {
     cursor: pointer;
     transform-origin: center;
-}
-
-#one:target .img_wrapper {
-    height: 25rem;
-}
-
-input {
-    display: none;
-}
-
-label:hover {
-    cursor: pointer;
 }
